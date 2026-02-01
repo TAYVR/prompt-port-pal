@@ -1,31 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Send, MessageCircle, Mail, MapPin, Phone, Github, Linkedin, ArrowUpRight } from 'lucide-react';
+import { Send, MessageCircle, Mail, MapPin, Github, Linkedin, ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
-
-const contactInfo = [
-  {
-    icon: Mail,
-    label: 'Email',
-    value: 'mahditayar.25@gmail.com',
-    href: 'mailto:mahditayar.25@gmail.com',
-  },
-  {
-    icon: MessageCircle,
-    label: 'WhatsApp',
-    value: '+212 717 383 956',
-    href: 'https://wa.me/212717383956',
-  },
-  {
-    icon: MapPin,
-    label: 'Location',
-    value: 'Morocco',
-    href: null,
-  },
-];
 
 const socialLinks = [
   { icon: Github, href: 'https://github.com/TAYVR', label: 'GitHub' },
@@ -33,9 +13,31 @@ const socialLinks = [
 ];
 
 export const ContactSection = () => {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const contactInfo = [
+    {
+      icon: Mail,
+      label: t('contact.info.email'),
+      value: 'mahditayar.25@gmail.com',
+      href: 'mailto:mahditayar.25@gmail.com',
+    },
+    {
+      icon: MessageCircle,
+      label: t('contact.info.whatsapp'),
+      value: '+212 717 383 956',
+      href: 'https://wa.me/212717383956',
+    },
+    {
+      icon: MapPin,
+      label: t('contact.info.location'),
+      value: t('about.location'),
+      href: null,
+    },
+  ];
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -44,7 +46,7 @@ export const ContactSection = () => {
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
     
-    toast.success('Message sent successfully! I\'ll get back to you soon.');
+    toast.success(t('contact.successMessage'));
     setIsSubmitting(false);
     (e.target as HTMLFormElement).reset();
   };
@@ -63,13 +65,13 @@ export const ContactSection = () => {
           className="text-center mb-16"
         >
           <span className="text-primary font-mono text-sm mb-4 block">
-            {'<Contact />'}
+            {t('contact.tag')}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Let's <span className="text-gradient">Connect</span>
+            {t('contact.title')} <span className="text-gradient">{t('contact.titleHighlight')}</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Have a project in mind? Let's discuss how we can work together to bring your ideas to life.
+            {t('contact.description')}
           </p>
         </motion.div>
 
@@ -83,7 +85,7 @@ export const ContactSection = () => {
           >
             {/* Quick Contact */}
             <div>
-              <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>
+              <h3 className="text-2xl font-semibold mb-6">{t('contact.getInTouch')}</h3>
               <div className="space-y-4">
                 {contactInfo.map((item, index) => (
                   <motion.div
@@ -106,7 +108,7 @@ export const ContactSection = () => {
                           <p className="text-sm text-muted-foreground">{item.label}</p>
                           <p className="font-medium">{item.value}</p>
                         </div>
-                        <ArrowUpRight size={18} className="ml-auto text-muted-foreground group-hover:text-primary transition-colors" />
+                        <ArrowUpRight size={18} className="ms-auto text-muted-foreground group-hover:text-primary transition-colors" />
                       </a>
                     ) : (
                       <div className="flex items-center gap-4 p-4 rounded-xl border border-border bg-card/50">
@@ -126,7 +128,7 @@ export const ContactSection = () => {
 
             {/* Social Links */}
             <div>
-              <h4 className="text-lg font-medium mb-4">Follow Me</h4>
+              <h4 className="text-lg font-medium mb-4">{t('contact.followMe')}</h4>
               <div className="flex gap-4">
                 {socialLinks.map((social) => (
                   <motion.a
@@ -160,8 +162,8 @@ export const ContactSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <MessageCircle className="mr-2" size={20} />
-                  Chat on WhatsApp
+                  <MessageCircle className="me-2" size={20} />
+                  {t('contact.chatOnWhatsApp')}
                 </a>
               </Button>
             </motion.div>
@@ -177,25 +179,25 @@ export const ContactSection = () => {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
-                    Name
+                    {t('contact.form.name')}
                   </label>
                   <Input
                     id="name"
                     name="name"
-                    placeholder="Your name"
+                    placeholder={t('contact.form.namePlaceholder')}
                     required
                     className="bg-card/50 border-border focus:border-primary"
                   />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Email
+                    {t('contact.form.email')}
                   </label>
                   <Input
                     id="email"
                     name="email"
                     type="email"
-                    placeholder="your@email.com"
+                    placeholder={t('contact.form.emailPlaceholder')}
                     required
                     className="bg-card/50 border-border focus:border-primary"
                   />
@@ -204,12 +206,12 @@ export const ContactSection = () => {
 
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                  Subject
+                  {t('contact.form.subject')}
                 </label>
                 <Input
                   id="subject"
                   name="subject"
-                  placeholder="Project inquiry"
+                  placeholder={t('contact.form.subjectPlaceholder')}
                   required
                   className="bg-card/50 border-border focus:border-primary"
                 />
@@ -217,12 +219,12 @@ export const ContactSection = () => {
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Message
+                  {t('contact.form.message')}
                 </label>
                 <Textarea
                   id="message"
                   name="message"
-                  placeholder="Tell me about your project..."
+                  placeholder={t('contact.form.messagePlaceholder')}
                   rows={5}
                   required
                   className="bg-card/50 border-border focus:border-primary resize-none"
@@ -236,11 +238,11 @@ export const ContactSection = () => {
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
-                  'Sending...'
+                  t('contact.form.sending')
                 ) : (
                   <>
-                    <Send className="mr-2" size={18} />
-                    Send Message
+                    <Send className="me-2" size={18} />
+                    {t('contact.form.send')}
                   </>
                 )}
               </Button>

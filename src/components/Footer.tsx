@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Heart, Github, Linkedin, Mail } from 'lucide-react';
 
@@ -8,7 +9,15 @@ const socialLinks = [
 ];
 
 export const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
+
+  const navItems = [
+    { name: t('nav.about'), href: '#about' },
+    { name: t('nav.skills'), href: '#skills' },
+    { name: t('nav.projects'), href: '#projects' },
+    { name: t('nav.contact'), href: '#contact' },
+  ];
 
   return (
     <footer className="py-12 border-t border-border">
@@ -23,20 +32,20 @@ export const Footer = () => {
               ET.
             </motion.span>
             <p className="text-sm text-muted-foreground flex items-center gap-1">
-              © {currentYear} Elmahdi Tayar. Built with{' '}
+              © {currentYear} Elmahdi Tayar. {t('footer.builtWith')}{' '}
               <Heart size={14} className="text-destructive" fill="currentColor" />
             </p>
           </div>
 
           {/* Navigation */}
           <nav className="flex gap-6">
-            {['About', 'Skills', 'Projects', 'Contact'].map((item) => (
+            {navItems.map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.href}
+                href={item.href}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                {item}
+                {item.name}
               </a>
             ))}
           </nav>

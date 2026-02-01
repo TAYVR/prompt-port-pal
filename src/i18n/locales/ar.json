@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "about": "نبذة عني",
+    "skills": "المهارات",
+    "projects": "المشاريع",
+    "contact": "تواصل"
+  },
+  "hero": {
+    "available": "متاح لمشاريع جديدة",
+    "title": "مطور Full-Stack",
+    "description": "إنشاء تطبيقات ويب قابلة للتوسع وعالية الأداء باستخدام تقنيات حديثة. متخصص في Laravel و React والحلول السحابية.",
+    "viewProjects": "عرض المشاريع",
+    "contactMe": "تواصل معي",
+    "scrollToExplore": "مرر للاستكشاف"
+  },
+  "about": {
+    "tag": "<AboutMe />",
+    "title": "بناء تجارب",
+    "titleHighlight": "رقمية",
+    "intro": "أنا مطور Full-Stack مقيم في",
+    "location": "المغرب",
+    "introEnd": "، شغوف بإنشاء تطبيقات ويب قوية وقابلة للتوسع تحل مشاكل حقيقية.",
+    "description1": "مع خبرة تمتد من أطر العمل الأمامية مثل React و Vue.js إلى تقنيات الخادم بما في ذلك Laravel و Node.js و Django، أقدم حلولاً شاملة ذات أداء استثنائي.",
+    "description2": "تركيزي على كتابة كود نظيف وفعال لا يعمل فحسب بل يتوسع مع احتياجات عملك. من أنظمة ERP إلى منصات التجارة الإلكترونية، قمت ببناء تطبيقات تتعامل مع حركة مرور عالية ومنطق أعمال معقد.",
+    "stats": {
+      "yearsExperience": "سنوات الخبرة",
+      "projectsCompleted": "مشاريع مكتملة",
+      "technologies": "تقنيات",
+      "happyClients": "عملاء سعداء"
+    },
+    "highlights": {
+      "cleanArchitecture": {
+        "title": "هندسة نظيفة",
+        "description": "بناء قواعد كود قابلة للتوسع والصيانة مع أفضل الممارسات"
+      },
+      "performanceFirst": {
+        "title": "الأداء أولاً",
+        "description": "التحسين للسرعة والتوسع وتجربة مستخدم استثنائية"
+      },
+      "businessFocus": {
+        "title": "التركيز على الأعمال",
+        "description": "فهم احتياجات الأعمال لتقديم حلول مؤثرة"
+      }
+    }
+  },
+  "skills": {
+    "tag": "<Skills />",
+    "title": "الخبرة",
+    "titleHighlight": "التقنية",
+    "description": "مجموعة أدوات شاملة تغطي الواجهة الأمامية والخلفية وقواعد البيانات و DevOps لتقديم حلول كاملة.",
+    "categories": {
+      "frontend": "الواجهة الأمامية",
+      "backend": "الخادم",
+      "database": "قواعد البيانات",
+      "devops": "DevOps والأدوات"
+    }
+  },
+  "projects": {
+    "tag": "<Projects />",
+    "title": "أعمال",
+    "titleHighlight": "مميزة",
+    "description": "عرض لتطبيقات جاهزة للإنتاج مبنية بتقنيات حديثة وأفضل الممارسات.",
+    "viewMoreOnGithub": "عرض المزيد على GitHub",
+    "items": {
+      "masterfut": {
+        "subtitle": "منصة التجارة الإلكترونية EA FC Coins",
+        "description": "منصة تجارة إلكترونية متعددة اللغات لعملة الألعاب مع تكاملات دفع متقدمة وتحسين حركة المرور العالية."
+      },
+      "ka3ba": {
+        "subtitle": "نظام ERP للحج والعمرة",
+        "description": "منصة ERP شاملة لوكالات السفر المتخصصة في السياحة الدينية مع أتمتة أعمال كاملة."
+      },
+      "almoulate": {
+        "subtitle": "منصة إدارة العقارات",
+        "description": "نظام شامل لإدارة العقارات مع تتبع مالي وإدارة المشاريع ووحدات الموارد البشرية."
+      },
+      "aligarage": {
+        "subtitle": "SaaS إدارة الكراج",
+        "description": "نظام خاص لإدارة الكراج مع التحكم في المخزون وتتبع الخدمة والإدارة المالية."
+      },
+      "smilebusiness": {
+        "subtitle": "منصة توزيع B2B",
+        "description": "منصة توزيع منتجات التنظيف الاحترافية مع نظام عروض الأسعار وإدارة المحتوى."
+      },
+      "schoolsystem": {
+        "subtitle": "نظام إدارة المدارس",
+        "description": "حل شامل لإدارة المدارس مع بوابات للإداريين والمعلمين والأولياء والطلاب."
+      }
+    },
+    "features": {
+      "10Languages": "+10 لغات",
+      "multiplePaymentGateways": "بوابات دفع متعددة",
+      "adminDashboard": "لوحة تحكم المشرف",
+      "highTrafficOptimization": "تحسين الحركة العالية",
+      "quoteManagement": "إدارة عروض الأسعار",
+      "accountingSystem": "نظام المحاسبة",
+      "supplierManagement": "إدارة الموردين",
+      "programPlanning": "تخطيط البرامج",
+      "financialTransactions": "المعاملات المالية",
+      "projectManagement": "إدارة المشاريع",
+      "hrModule": "وحدة الموارد البشرية",
+      "analyticsReports": "التحليلات والتقارير",
+      "stockManagement": "إدارة المخزون",
+      "serviceHistory": "سجل الخدمة",
+      "posSystem": "نظام نقاط البيع",
+      "profitTracking": "تتبع الأرباح",
+      "clientQuotations": "عروض أسعار العملاء",
+      "cmsDashboard": "لوحة تحكم CMS",
+      "productCatalog": "كتالوج المنتجات",
+      "multiPortalAccess": "وصول متعدد البوابات",
+      "attendanceTracking": "تتبع الحضور",
+      "lmsIntegration": "تكامل LMS",
+      "feeManagement": "إدارة الرسوم"
+    }
+  },
+  "contact": {
+    "tag": "<Contact />",
+    "title": "دعنا",
+    "titleHighlight": "نتواصل",
+    "description": "هل لديك مشروع في ذهنك؟ دعنا نناقش كيف يمكننا العمل معًا لتحقيق أفكارك.",
+    "getInTouch": "تواصل معي",
+    "followMe": "تابعني",
+    "chatOnWhatsApp": "الدردشة على واتساب",
+    "form": {
+      "name": "الاسم",
+      "namePlaceholder": "اسمك",
+      "email": "البريد الإلكتروني",
+      "emailPlaceholder": "بريدك@الإلكتروني.com",
+      "subject": "الموضوع",
+      "subjectPlaceholder": "استفسار عن مشروع",
+      "message": "الرسالة",
+      "messagePlaceholder": "أخبرني عن مشروعك...",
+      "send": "إرسال الرسالة",
+      "sending": "جاري الإرسال..."
+    },
+    "info": {
+      "email": "البريد الإلكتروني",
+      "whatsapp": "واتساب",
+      "location": "الموقع"
+    },
+    "successMessage": "تم إرسال الرسالة بنجاح! سأرد عليك قريباً."
+  },
+  "footer": {
+    "builtWith": "صُنع بـ"
+  }
+}

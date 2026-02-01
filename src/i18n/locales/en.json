@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "available": "Available for new projects",
+    "title": "Full-Stack Developer",
+    "description": "Crafting scalable, high-performance web applications with modern technologies. Specializing in Laravel, React, and cloud-native solutions.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me",
+    "scrollToExplore": "Scroll to explore"
+  },
+  "about": {
+    "tag": "<AboutMe />",
+    "title": "Building Digital",
+    "titleHighlight": "Experiences",
+    "intro": "I'm a Full-Stack Developer based in",
+    "location": "Morocco",
+    "introEnd": ", passionate about creating robust, scalable web applications that solve real-world problems.",
+    "description1": "With expertise spanning from frontend frameworks like React and Vue.js to backend technologies including Laravel, Node.js, and Django, I deliver end-to-end solutions that perform exceptionally.",
+    "description2": "My focus is on writing clean, efficient code that not only works but scales with your business needs. From ERP systems to e-commerce platforms, I've built applications handling high traffic and complex business logic.",
+    "stats": {
+      "yearsExperience": "Years Experience",
+      "projectsCompleted": "Projects Completed",
+      "technologies": "Technologies",
+      "happyClients": "Happy Clients"
+    },
+    "highlights": {
+      "cleanArchitecture": {
+        "title": "Clean Architecture",
+        "description": "Building scalable, maintainable codebases with industry best practices"
+      },
+      "performanceFirst": {
+        "title": "Performance First",
+        "description": "Optimizing for speed, scalability, and exceptional user experience"
+      },
+      "businessFocus": {
+        "title": "Business Focus",
+        "description": "Understanding business needs to deliver impactful solutions"
+      }
+    }
+  },
+  "skills": {
+    "tag": "<Skills />",
+    "title": "Technical",
+    "titleHighlight": "Expertise",
+    "description": "A comprehensive toolkit spanning frontend, backend, databases, and DevOps to deliver complete solutions.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "devops": "DevOps & Tools"
+    }
+  },
+  "projects": {
+    "tag": "<Projects />",
+    "title": "Featured",
+    "titleHighlight": "Work",
+    "description": "A showcase of production-ready applications built with modern technologies and best practices.",
+    "viewMoreOnGithub": "View More on GitHub",
+    "items": {
+      "masterfut": {
+        "subtitle": "EA FC Coins E-Commerce Platform",
+        "description": "Multi-language e-commerce platform for gaming currency with advanced payment integrations and high-traffic optimization."
+      },
+      "ka3ba": {
+        "subtitle": "Hajj & Omra ERP System",
+        "description": "Comprehensive ERP platform for travel agencies specializing in religious tourism with complete business automation."
+      },
+      "almoulate": {
+        "subtitle": "Real Estate Management Platform",
+        "description": "All-in-one real estate management system with financial tracking, project management, and HR modules."
+      },
+      "aligarage": {
+        "subtitle": "Garage Management SaaS",
+        "description": "Private garage management system with inventory control, service tracking, and financial management."
+      },
+      "smilebusiness": {
+        "subtitle": "B2B Distribution Platform",
+        "description": "Professional cleaning products distribution platform with quotation system and content management."
+      },
+      "schoolsystem": {
+        "subtitle": "Educational Management System",
+        "description": "Complete school management solution with portals for admins, teachers, parents, and students."
+      }
+    },
+    "features": {
+      "10Languages": "10+ Languages",
+      "multiplePaymentGateways": "Multiple Payment Gateways",
+      "adminDashboard": "Admin Dashboard",
+      "highTrafficOptimization": "High Traffic Optimization",
+      "quoteManagement": "Quote Management",
+      "accountingSystem": "Accounting System",
+      "supplierManagement": "Supplier Management",
+      "programPlanning": "Program Planning",
+      "financialTransactions": "Financial Transactions",
+      "projectManagement": "Project Management",
+      "hrModule": "HR Module",
+      "analyticsReports": "Analytics & Reports",
+      "stockManagement": "Stock Management",
+      "serviceHistory": "Service History",
+      "posSystem": "POS System",
+      "profitTracking": "Profit Tracking",
+      "clientQuotations": "Client Quotations",
+      "cmsDashboard": "CMS Dashboard",
+      "productCatalog": "Product Catalog",
+      "multiPortalAccess": "Multi-Portal Access",
+      "attendanceTracking": "Attendance Tracking",
+      "lmsIntegration": "LMS Integration",
+      "feeManagement": "Fee Management"
+    }
+  },
+  "contact": {
+    "tag": "<Contact />",
+    "title": "Let's",
+    "titleHighlight": "Connect",
+    "description": "Have a project in mind? Let's discuss how we can work together to bring your ideas to life.",
+    "getInTouch": "Get in Touch",
+    "followMe": "Follow Me",
+    "chatOnWhatsApp": "Chat on WhatsApp",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Project inquiry",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "send": "Send Message",
+      "sending": "Sending..."
+    },
+    "info": {
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "location": "Location"
+    },
+    "successMessage": "Message sent successfully! I'll get back to you soon."
+  },
+  "footer": {
+    "builtWith": "Built with"
+  }
+}

@@ -1,14 +1,9 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
-const navLinks = [
-  { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
-];
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 
 const socialLinks = [
   { icon: Github, href: 'https://github.com/TAYVR', label: 'GitHub' },
@@ -17,8 +12,16 @@ const socialLinks = [
 ];
 
 export const Navigation = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const navLinks = [
+    { name: t('nav.about'), href: '#about' },
+    { name: t('nav.skills'), href: '#skills' },
+    { name: t('nav.projects'), href: '#projects' },
+    { name: t('nav.contact'), href: '#contact' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,7 +56,7 @@ export const Navigation = () => {
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link, index) => (
               <motion.a
-                key={link.name}
+                key={link.href}
                 href={link.href}
                 className="text-muted-foreground hover:text-foreground transition-colors relative group"
                 initial={{ opacity: 0, y: -20 }}
@@ -61,12 +64,12 @@ export const Navigation = () => {
                 transition={{ delay: index * 0.1 }}
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
+                <span className="absolute -bottom-1 start-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
               </motion.a>
             ))}
           </div>
 
-          {/* Social Links - Desktop */}
+          {/* Social Links & Language Switcher - Desktop */}
           <div className="hidden md:flex items-center gap-3">
             {socialLinks.map((social) => (
               <motion.a
@@ -81,17 +84,20 @@ export const Navigation = () => {
                 <social.icon size={20} />
               </motion.a>
             ))}
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </Button>
+          <div className="flex items-center gap-2 md:hidden">
+            <LanguageSwitcher />
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -107,7 +113,7 @@ export const Navigation = () => {
               <div className="py-4 space-y-4">
                 {navLinks.map((link, index) => (
                   <motion.a
-                    key={link.name}
+                    key={link.href}
                     href={link.href}
                     className="block text-lg text-muted-foreground hover:text-foreground transition-colors"
                     initial={{ opacity: 0, x: -20 }}
