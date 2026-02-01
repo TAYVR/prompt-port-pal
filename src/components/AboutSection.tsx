@@ -1,36 +1,38 @@
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { MapPin, Briefcase, Code2, Rocket } from 'lucide-react';
 
-const stats = [
-  { label: 'Years Experience', value: '5+' },
-  { label: 'Projects Completed', value: '20+' },
-  { label: 'Technologies', value: '15+' },
-  { label: 'Happy Clients', value: '30+' },
-];
-
-const highlights = [
-  {
-    icon: Code2,
-    title: 'Clean Architecture',
-    description: 'Building scalable, maintainable codebases with industry best practices',
-  },
-  {
-    icon: Rocket,
-    title: 'Performance First',
-    description: 'Optimizing for speed, scalability, and exceptional user experience',
-  },
-  {
-    icon: Briefcase,
-    title: 'Business Focus',
-    description: 'Understanding business needs to deliver impactful solutions',
-  },
-];
-
 export const AboutSection = () => {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  const stats = [
+    { label: t('about.stats.yearsExperience'), value: '5+' },
+    { label: t('about.stats.projectsCompleted'), value: '20+' },
+    { label: t('about.stats.technologies'), value: '15+' },
+    { label: t('about.stats.happyClients'), value: '30+' },
+  ];
+
+  const highlights = [
+    {
+      icon: Code2,
+      title: t('about.highlights.cleanArchitecture.title'),
+      description: t('about.highlights.cleanArchitecture.description'),
+    },
+    {
+      icon: Rocket,
+      title: t('about.highlights.performanceFirst.title'),
+      description: t('about.highlights.performanceFirst.description'),
+    },
+    {
+      icon: Briefcase,
+      title: t('about.highlights.businessFocus.title'),
+      description: t('about.highlights.businessFocus.description'),
+    },
+  ];
 
   return (
     <section id="about" className="py-24 relative" ref={ref}>
@@ -43,24 +45,22 @@ export const AboutSection = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="text-primary font-mono text-sm mb-4 block">
-              {'<AboutMe />'}
+              {t('about.tag')}
             </span>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Building Digital{' '}
-              <span className="text-gradient">Experiences</span>
+              {t('about.title')}{' '}
+              <span className="text-gradient">{t('about.titleHighlight')}</span>
             </h2>
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
               <p>
-                I'm a Full-Stack Developer based in <span className="text-foreground inline-flex items-center gap-1">
-                  <MapPin size={16} className="text-primary" /> Morocco
-                </span>, passionate about creating robust, scalable web applications that solve real-world problems.
+                {t('about.intro')}{' '}
+                <span className="text-foreground inline-flex items-center gap-1">
+                  <MapPin size={16} className="text-primary" /> {t('about.location')}
+                </span>
+                {t('about.introEnd')}
               </p>
-              <p>
-                With expertise spanning from frontend frameworks like React and Vue.js to backend technologies including Laravel, Node.js, and Django, I deliver end-to-end solutions that perform exceptionally.
-              </p>
-              <p>
-                My focus is on writing clean, efficient code that not only works but scales with your business needs. From ERP systems to e-commerce platforms, I've built applications handling high traffic and complex business logic.
-              </p>
+              <p>{t('about.description1')}</p>
+              <p>{t('about.description2')}</p>
             </div>
 
             {/* Stats */}
@@ -124,11 +124,11 @@ export const AboutSection = () => {
               <code className="text-muted-foreground">
                 <span className="text-primary">const</span> developer = {'{'}
                 <br />
-                <span className="pl-4">name:</span> <span className="text-green-400">"Elmahdi Tayar"</span>,
+                <span className="ps-4">name:</span> <span className="text-green-400">"Elmahdi Tayar"</span>,
                 <br />
-                <span className="pl-4">role:</span> <span className="text-green-400">"Full-Stack Dev"</span>,
+                <span className="ps-4">role:</span> <span className="text-green-400">"Full-Stack Dev"</span>,
                 <br />
-                <span className="pl-4">passion:</span> <span className="text-green-400">"Building great products"</span>
+                <span className="ps-4">passion:</span> <span className="text-green-400">"Building great products"</span>
                 <br />
                 {'}'};
               </code>

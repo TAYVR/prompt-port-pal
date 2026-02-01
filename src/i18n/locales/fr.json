@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "available": "Disponible pour de nouveaux projets",
+    "title": "Développeur Full-Stack",
+    "description": "Création d'applications web évolutives et performantes avec des technologies modernes. Spécialisé en Laravel, React et solutions cloud.",
+    "viewProjects": "Voir les projets",
+    "contactMe": "Me contacter",
+    "scrollToExplore": "Défiler pour explorer"
+  },
+  "about": {
+    "tag": "<AboutMe />",
+    "title": "Créateur d'Expériences",
+    "titleHighlight": "Numériques",
+    "intro": "Je suis Développeur Full-Stack basé au",
+    "location": "Maroc",
+    "introEnd": ", passionné par la création d'applications web robustes et évolutives qui résolvent des problèmes réels.",
+    "description1": "Avec une expertise allant des frameworks frontend comme React et Vue.js aux technologies backend incluant Laravel, Node.js et Django, je livre des solutions complètes performantes.",
+    "description2": "Mon focus est d'écrire du code propre et efficace qui non seulement fonctionne mais s'adapte aux besoins de votre entreprise. Des systèmes ERP aux plateformes e-commerce, j'ai construit des applications gérant un trafic élevé et une logique métier complexe.",
+    "stats": {
+      "yearsExperience": "Années d'expérience",
+      "projectsCompleted": "Projets réalisés",
+      "technologies": "Technologies",
+      "happyClients": "Clients satisfaits"
+    },
+    "highlights": {
+      "cleanArchitecture": {
+        "title": "Architecture propre",
+        "description": "Construction de bases de code évolutives et maintenables avec les meilleures pratiques"
+      },
+      "performanceFirst": {
+        "title": "Performance d'abord",
+        "description": "Optimisation pour la vitesse, l'évolutivité et une expérience utilisateur exceptionnelle"
+      },
+      "businessFocus": {
+        "title": "Focus métier",
+        "description": "Compréhension des besoins métier pour livrer des solutions impactantes"
+      }
+    }
+  },
+  "skills": {
+    "tag": "<Skills />",
+    "title": "Expertise",
+    "titleHighlight": "Technique",
+    "description": "Une boîte à outils complète couvrant frontend, backend, bases de données et DevOps pour des solutions complètes.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Base de données",
+      "devops": "DevOps & Outils"
+    }
+  },
+  "projects": {
+    "tag": "<Projects />",
+    "title": "Travaux",
+    "titleHighlight": "Réalisés",
+    "description": "Une vitrine d'applications prêtes pour la production, construites avec des technologies modernes et les meilleures pratiques.",
+    "viewMoreOnGithub": "Voir plus sur GitHub",
+    "items": {
+      "masterfut": {
+        "subtitle": "Plateforme E-Commerce EA FC Coins",
+        "description": "Plateforme e-commerce multilingue pour monnaie de jeu avec intégrations de paiement avancées et optimisation haute charge."
+      },
+      "ka3ba": {
+        "subtitle": "Système ERP Hajj & Omra",
+        "description": "Plateforme ERP complète pour agences de voyage spécialisées dans le tourisme religieux avec automatisation métier complète."
+      },
+      "almoulate": {
+        "subtitle": "Plateforme de Gestion Immobilière",
+        "description": "Système complet de gestion immobilière avec suivi financier, gestion de projets et modules RH."
+      },
+      "aligarage": {
+        "subtitle": "SaaS Gestion de Garage",
+        "description": "Système privé de gestion de garage avec contrôle d'inventaire, suivi des services et gestion financière."
+      },
+      "smilebusiness": {
+        "subtitle": "Plateforme de Distribution B2B",
+        "description": "Plateforme de distribution de produits de nettoyage professionnels avec système de devis et gestion de contenu."
+      },
+      "schoolsystem": {
+        "subtitle": "Système de Gestion Scolaire",
+        "description": "Solution complète de gestion scolaire avec portails pour administrateurs, enseignants, parents et élèves."
+      }
+    },
+    "features": {
+      "10Languages": "10+ Langues",
+      "multiplePaymentGateways": "Passerelles de paiement multiples",
+      "adminDashboard": "Tableau de bord admin",
+      "highTrafficOptimization": "Optimisation haute charge",
+      "quoteManagement": "Gestion des devis",
+      "accountingSystem": "Système comptable",
+      "supplierManagement": "Gestion fournisseurs",
+      "programPlanning": "Planification de programmes",
+      "financialTransactions": "Transactions financières",
+      "projectManagement": "Gestion de projets",
+      "hrModule": "Module RH",
+      "analyticsReports": "Analyses & Rapports",
+      "stockManagement": "Gestion des stocks",
+      "serviceHistory": "Historique des services",
+      "posSystem": "Système POS",
+      "profitTracking": "Suivi des bénéfices",
+      "clientQuotations": "Devis clients",
+      "cmsDashboard": "Tableau de bord CMS",
+      "productCatalog": "Catalogue produits",
+      "multiPortalAccess": "Accès multi-portail",
+      "attendanceTracking": "Suivi des présences",
+      "lmsIntegration": "Intégration LMS",
+      "feeManagement": "Gestion des frais"
+    }
+  },
+  "contact": {
+    "tag": "<Contact />",
+    "title": "Restons en",
+    "titleHighlight": "Contact",
+    "description": "Vous avez un projet en tête ? Discutons de comment nous pouvons travailler ensemble pour concrétiser vos idées.",
+    "getInTouch": "Me contacter",
+    "followMe": "Me suivre",
+    "chatOnWhatsApp": "Discuter sur WhatsApp",
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "Email",
+      "emailPlaceholder": "votre@email.com",
+      "subject": "Sujet",
+      "subjectPlaceholder": "Demande de projet",
+      "message": "Message",
+      "messagePlaceholder": "Parlez-moi de votre projet...",
+      "send": "Envoyer le message",
+      "sending": "Envoi en cours..."
+    },
+    "info": {
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "location": "Localisation"
+    },
+    "successMessage": "Message envoyé avec succès ! Je vous répondrai bientôt."
+  },
+  "footer": {
+    "builtWith": "Construit avec"
+  }
+}

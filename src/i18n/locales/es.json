@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "available": "Disponible para nuevos proyectos",
+    "title": "Desarrollador Full-Stack",
+    "description": "Creando aplicaciones web escalables y de alto rendimiento con tecnologías modernas. Especializado en Laravel, React y soluciones cloud.",
+    "viewProjects": "Ver proyectos",
+    "contactMe": "Contáctame",
+    "scrollToExplore": "Desplaza para explorar"
+  },
+  "about": {
+    "tag": "<AboutMe />",
+    "title": "Construyendo Experiencias",
+    "titleHighlight": "Digitales",
+    "intro": "Soy Desarrollador Full-Stack ubicado en",
+    "location": "Marruecos",
+    "introEnd": ", apasionado por crear aplicaciones web robustas y escalables que resuelven problemas reales.",
+    "description1": "Con experiencia que abarca desde frameworks frontend como React y Vue.js hasta tecnologías backend incluyendo Laravel, Node.js y Django, entrego soluciones completas de alto rendimiento.",
+    "description2": "Mi enfoque está en escribir código limpio y eficiente que no solo funciona sino que escala con las necesidades de tu negocio. Desde sistemas ERP hasta plataformas de comercio electrónico, he construido aplicaciones que manejan alto tráfico y lógica empresarial compleja.",
+    "stats": {
+      "yearsExperience": "Años de experiencia",
+      "projectsCompleted": "Proyectos completados",
+      "technologies": "Tecnologías",
+      "happyClients": "Clientes satisfechos"
+    },
+    "highlights": {
+      "cleanArchitecture": {
+        "title": "Arquitectura limpia",
+        "description": "Construyendo bases de código escalables y mantenibles con las mejores prácticas"
+      },
+      "performanceFirst": {
+        "title": "Rendimiento primero",
+        "description": "Optimizando para velocidad, escalabilidad y experiencia de usuario excepcional"
+      },
+      "businessFocus": {
+        "title": "Enfoque empresarial",
+        "description": "Entendiendo las necesidades del negocio para entregar soluciones impactantes"
+      }
+    }
+  },
+  "skills": {
+    "tag": "<Skills />",
+    "title": "Experiencia",
+    "titleHighlight": "Técnica",
+    "description": "Un conjunto completo de herramientas que abarca frontend, backend, bases de datos y DevOps para entregar soluciones completas.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Base de datos",
+      "devops": "DevOps y Herramientas"
+    }
+  },
+  "projects": {
+    "tag": "<Projects />",
+    "title": "Trabajos",
+    "titleHighlight": "Destacados",
+    "description": "Una muestra de aplicaciones listas para producción construidas con tecnologías modernas y mejores prácticas.",
+    "viewMoreOnGithub": "Ver más en GitHub",
+    "items": {
+      "masterfut": {
+        "subtitle": "Plataforma E-Commerce EA FC Coins",
+        "description": "Plataforma de comercio electrónico multilingüe para moneda de juegos con integraciones de pago avanzadas y optimización de alto tráfico."
+      },
+      "ka3ba": {
+        "subtitle": "Sistema ERP Hajj & Omra",
+        "description": "Plataforma ERP integral para agencias de viajes especializadas en turismo religioso con automatización empresarial completa."
+      },
+      "almoulate": {
+        "subtitle": "Plataforma de Gestión Inmobiliaria",
+        "description": "Sistema integral de gestión inmobiliaria con seguimiento financiero, gestión de proyectos y módulos de RRHH."
+      },
+      "aligarage": {
+        "subtitle": "SaaS Gestión de Taller",
+        "description": "Sistema privado de gestión de taller con control de inventario, seguimiento de servicios y gestión financiera."
+      },
+      "smilebusiness": {
+        "subtitle": "Plataforma de Distribución B2B",
+        "description": "Plataforma de distribución de productos de limpieza profesional con sistema de cotizaciones y gestión de contenido."
+      },
+      "schoolsystem": {
+        "subtitle": "Sistema de Gestión Escolar",
+        "description": "Solución completa de gestión escolar con portales para administradores, profesores, padres y estudiantes."
+      }
+    },
+    "features": {
+      "10Languages": "+10 Idiomas",
+      "multiplePaymentGateways": "Múltiples pasarelas de pago",
+      "adminDashboard": "Panel de administración",
+      "highTrafficOptimization": "Optimización alto tráfico",
+      "quoteManagement": "Gestión de cotizaciones",
+      "accountingSystem": "Sistema contable",
+      "supplierManagement": "Gestión de proveedores",
+      "programPlanning": "Planificación de programas",
+      "financialTransactions": "Transacciones financieras",
+      "projectManagement": "Gestión de proyectos",
+      "hrModule": "Módulo RRHH",
+      "analyticsReports": "Análisis e informes",
+      "stockManagement": "Gestión de stock",
+      "serviceHistory": "Historial de servicios",
+      "posSystem": "Sistema POS",
+      "profitTracking": "Seguimiento de ganancias",
+      "clientQuotations": "Cotizaciones de clientes",
+      "cmsDashboard": "Panel CMS",
+      "productCatalog": "Catálogo de productos",
+      "multiPortalAccess": "Acceso multi-portal",
+      "attendanceTracking": "Seguimiento de asistencia",
+      "lmsIntegration": "Integración LMS",
+      "feeManagement": "Gestión de tarifas"
+    }
+  },
+  "contact": {
+    "tag": "<Contact />",
+    "title": "Conectemos",
+    "titleHighlight": "Juntos",
+    "description": "¿Tienes un proyecto en mente? Hablemos de cómo podemos trabajar juntos para hacer realidad tus ideas.",
+    "getInTouch": "Contáctame",
+    "followMe": "Sígueme",
+    "chatOnWhatsApp": "Chatear en WhatsApp",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "subject": "Asunto",
+      "subjectPlaceholder": "Consulta de proyecto",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+      "send": "Enviar mensaje",
+      "sending": "Enviando..."
+    },
+    "info": {
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "location": "Ubicación"
+    },
+    "successMessage": "¡Mensaje enviado con éxito! Te responderé pronto."
+  },
+  "footer": {
+    "builtWith": "Hecho con"
+  }
+}

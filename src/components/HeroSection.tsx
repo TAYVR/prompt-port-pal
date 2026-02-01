@@ -1,8 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { ArrowDown, MessageCircle, FolderOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const HeroSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Effects */}
@@ -11,7 +14,7 @@ export const HeroSection = () => {
       
       {/* Floating Orbs */}
       <motion.div
-        className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl"
+        className="absolute top-1/4 start-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl"
         animate={{
           x: [0, 50, 0],
           y: [0, -30, 0],
@@ -23,7 +26,7 @@ export const HeroSection = () => {
         }}
       />
       <motion.div
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
+        className="absolute bottom-1/4 end-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
         animate={{
           x: [0, -40, 0],
           y: [0, 40, 0],
@@ -45,7 +48,7 @@ export const HeroSection = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8"
           >
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-            <span className="text-sm text-muted-foreground">Available for new projects</span>
+            <span className="text-sm text-muted-foreground">{t('hero.available')}</span>
           </motion.div>
 
           {/* Name */}
@@ -66,7 +69,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-foreground mb-6"
           >
-            Full-Stack Developer
+            {t('hero.title')}
           </motion.h2>
 
           {/* Description */}
@@ -76,8 +79,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Crafting scalable, high-performance web applications with modern technologies. 
-            Specializing in Laravel, React, and cloud-native solutions.
+            {t('hero.description')}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -93,8 +95,8 @@ export const HeroSection = () => {
               asChild
             >
               <a href="#projects">
-                <FolderOpen className="mr-2" size={20} />
-                View Projects
+                <FolderOpen className="me-2" size={20} />
+                {t('hero.viewProjects')}
               </a>
             </Button>
             <Button
@@ -104,8 +106,8 @@ export const HeroSection = () => {
               asChild
             >
               <a href="#contact">
-                <MessageCircle className="mr-2" size={20} />
-                Contact Me
+                <MessageCircle className="me-2" size={20} />
+                {t('hero.contactMe')}
               </a>
             </Button>
           </motion.div>
@@ -143,7 +145,7 @@ export const HeroSection = () => {
             transition={{ duration: 2, repeat: Infinity }}
             className="flex flex-col items-center gap-2 text-muted-foreground"
           >
-            <span className="text-sm">Scroll to explore</span>
+            <span className="text-sm">{t('hero.scrollToExplore')}</span>
             <ArrowDown size={20} />
           </motion.div>
         </motion.div>

@@ -1,88 +1,120 @@
+import { useTranslation } from 'react-i18next';
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { ExternalLink, ChevronRight, Globe, ShoppingCart, Building2, Car, Plane, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
-const projects = [
-  {
-    id: 1,
-    title: 'MasterFut',
-    subtitle: 'EA FC Coins E-Commerce Platform',
-    description: 'Multi-language e-commerce platform for gaming currency with advanced payment integrations and high-traffic optimization.',
-    icon: ShoppingCart,
-    link: 'https://masterfut.com',
-    tech: ['Laravel', 'React.js', 'MySQL', 'Stripe', 'PayPal'],
-    features: ['10+ Languages', 'Multiple Payment Gateways', 'Admin Dashboard', 'High Traffic Optimization'],
-    color: 'from-green-500/20 to-emerald-500/20',
-    accentColor: 'text-green-400',
-  },
-  {
-    id: 2,
-    title: 'Ka3ba',
-    subtitle: 'Hajj & Omra ERP System',
-    description: 'Comprehensive ERP platform for travel agencies specializing in religious tourism with complete business automation.',
-    icon: Plane,
-    link: 'https://ka3ba.com',
-    tech: ['Next.js', 'React.js', 'Laravel', 'MySQL'],
-    features: ['Quote Management', 'Accounting System', 'Supplier Management', 'Program Planning'],
-    color: 'from-amber-500/20 to-orange-500/20',
-    accentColor: 'text-amber-400',
-  },
-  {
-    id: 3,
-    title: 'Almoulate Immobilier',
-    subtitle: 'Real Estate Management Platform',
-    description: 'All-in-one real estate management system with financial tracking, project management, and HR modules.',
-    icon: Building2,
-    link: null,
-    tech: ['Laravel', 'Livewire', 'Bootstrap', 'MySQL'],
-    features: ['Financial Transactions', 'Project Management', 'HR Module', 'Analytics & Reports'],
-    color: 'from-blue-500/20 to-cyan-500/20',
-    accentColor: 'text-blue-400',
-  },
-  {
-    id: 4,
-    title: 'AliGarage',
-    subtitle: 'Garage Management SaaS',
-    description: 'Private garage management system with inventory control, service tracking, and financial management.',
-    icon: Car,
-    link: null,
-    tech: ['Vue.js', 'Laravel', 'SQL Server', 'Bootstrap'],
-    features: ['Stock Management', 'Service History', 'POS System', 'Profit Tracking'],
-    color: 'from-purple-500/20 to-pink-500/20',
-    accentColor: 'text-purple-400',
-  },
-  {
-    id: 5,
-    title: 'SmileBusiness',
-    subtitle: 'B2B Distribution Platform',
-    description: 'Professional cleaning products distribution platform with quotation system and content management.',
-    icon: Globe,
-    link: 'https://smilebusiness.ma',
-    tech: ['Laravel', 'Bootstrap', 'MySQL', 'CMS'],
-    features: ['Client Quotations', 'Quote Management', 'CMS Dashboard', 'Product Catalog'],
-    color: 'from-teal-500/20 to-cyan-500/20',
-    accentColor: 'text-teal-400',
-  },
-  {
-    id: 6,
-    title: 'SchoolSystem',
-    subtitle: 'Educational Management System',
-    description: 'Complete school management solution with portals for admins, teachers, parents, and students.',
-    icon: GraduationCap,
-    link: null,
-    tech: ['Laravel', 'MySQL', 'Bootstrap', 'REST API'],
-    features: ['Multi-Portal Access', 'Attendance Tracking', 'LMS Integration', 'Fee Management'],
-    color: 'from-rose-500/20 to-red-500/20',
-    accentColor: 'text-rose-400',
-  },
-];
-
 export const ProjectsSection = () => {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const [hoveredId, setHoveredId] = useState<number | null>(null);
+
+  const projects = [
+    {
+      id: 1,
+      title: 'MasterFut',
+      subtitle: t('projects.items.masterfut.subtitle'),
+      description: t('projects.items.masterfut.description'),
+      icon: ShoppingCart,
+      link: 'https://masterfut.com',
+      tech: ['Laravel', 'React.js', 'MySQL', 'Stripe', 'PayPal'],
+      features: [
+        t('projects.features.10Languages'),
+        t('projects.features.multiplePaymentGateways'),
+        t('projects.features.adminDashboard'),
+        t('projects.features.highTrafficOptimization'),
+      ],
+      color: 'from-green-500/20 to-emerald-500/20',
+      accentColor: 'text-green-400',
+    },
+    {
+      id: 2,
+      title: 'Ka3ba',
+      subtitle: t('projects.items.ka3ba.subtitle'),
+      description: t('projects.items.ka3ba.description'),
+      icon: Plane,
+      link: 'https://ka3ba.com',
+      tech: ['Next.js', 'React.js', 'Laravel', 'MySQL'],
+      features: [
+        t('projects.features.quoteManagement'),
+        t('projects.features.accountingSystem'),
+        t('projects.features.supplierManagement'),
+        t('projects.features.programPlanning'),
+      ],
+      color: 'from-amber-500/20 to-orange-500/20',
+      accentColor: 'text-amber-400',
+    },
+    {
+      id: 3,
+      title: 'Almoulate Immobilier',
+      subtitle: t('projects.items.almoulate.subtitle'),
+      description: t('projects.items.almoulate.description'),
+      icon: Building2,
+      link: null,
+      tech: ['Laravel', 'Livewire', 'Bootstrap', 'MySQL'],
+      features: [
+        t('projects.features.financialTransactions'),
+        t('projects.features.projectManagement'),
+        t('projects.features.hrModule'),
+        t('projects.features.analyticsReports'),
+      ],
+      color: 'from-blue-500/20 to-cyan-500/20',
+      accentColor: 'text-blue-400',
+    },
+    {
+      id: 4,
+      title: 'AliGarage',
+      subtitle: t('projects.items.aligarage.subtitle'),
+      description: t('projects.items.aligarage.description'),
+      icon: Car,
+      link: null,
+      tech: ['Vue.js', 'Laravel', 'SQL Server', 'Bootstrap'],
+      features: [
+        t('projects.features.stockManagement'),
+        t('projects.features.serviceHistory'),
+        t('projects.features.posSystem'),
+        t('projects.features.profitTracking'),
+      ],
+      color: 'from-purple-500/20 to-pink-500/20',
+      accentColor: 'text-purple-400',
+    },
+    {
+      id: 5,
+      title: 'SmileBusiness',
+      subtitle: t('projects.items.smilebusiness.subtitle'),
+      description: t('projects.items.smilebusiness.description'),
+      icon: Globe,
+      link: 'https://smilebusiness.ma',
+      tech: ['Laravel', 'Bootstrap', 'MySQL', 'CMS'],
+      features: [
+        t('projects.features.clientQuotations'),
+        t('projects.features.quoteManagement'),
+        t('projects.features.cmsDashboard'),
+        t('projects.features.productCatalog'),
+      ],
+      color: 'from-teal-500/20 to-cyan-500/20',
+      accentColor: 'text-teal-400',
+    },
+    {
+      id: 6,
+      title: 'SchoolSystem',
+      subtitle: t('projects.items.schoolsystem.subtitle'),
+      description: t('projects.items.schoolsystem.description'),
+      icon: GraduationCap,
+      link: null,
+      tech: ['Laravel', 'MySQL', 'Bootstrap', 'REST API'],
+      features: [
+        t('projects.features.multiPortalAccess'),
+        t('projects.features.attendanceTracking'),
+        t('projects.features.lmsIntegration'),
+        t('projects.features.feeManagement'),
+      ],
+      color: 'from-rose-500/20 to-red-500/20',
+      accentColor: 'text-rose-400',
+    },
+  ];
 
   return (
     <section id="projects" className="py-24 relative" ref={ref}>
@@ -95,14 +127,13 @@ export const ProjectsSection = () => {
           className="text-center mb-16"
         >
           <span className="text-primary font-mono text-sm mb-4 block">
-            {'<Projects />'}
+            {t('projects.tag')}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Featured <span className="text-gradient">Work</span>
+            {t('projects.title')} <span className="text-gradient">{t('projects.titleHighlight')}</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A showcase of production-ready applications built with modern technologies 
-            and best practices.
+            {t('projects.description')}
           </p>
         </motion.div>
 
@@ -197,8 +228,8 @@ export const ProjectsSection = () => {
             asChild
           >
             <a href="https://github.com/TAYVR" target="_blank" rel="noopener noreferrer">
-              View More on GitHub
-              <ChevronRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+              {t('projects.viewMoreOnGithub')}
+              <ChevronRight size={18} className="ms-2 group-hover:translate-x-1 transition-transform rtl:rotate-180 rtl:group-hover:-translate-x-1" />
             </a>
           </Button>
         </motion.div>
