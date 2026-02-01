@@ -1,0 +1,208 @@
+import { motion, useInView } from 'framer-motion';
+import { useRef, useState } from 'react';
+import { ExternalLink, ChevronRight, Globe, ShoppingCart, Building2, Car, Plane, GraduationCap } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+const projects = [
+  {
+    id: 1,
+    title: 'MasterFut',
+    subtitle: 'EA FC Coins E-Commerce Platform',
+    description: 'Multi-language e-commerce platform for gaming currency with advanced payment integrations and high-traffic optimization.',
+    icon: ShoppingCart,
+    link: 'https://masterfut.com',
+    tech: ['Laravel', 'React.js', 'MySQL', 'Stripe', 'PayPal'],
+    features: ['10+ Languages', 'Multiple Payment Gateways', 'Admin Dashboard', 'High Traffic Optimization'],
+    color: 'from-green-500/20 to-emerald-500/20',
+    accentColor: 'text-green-400',
+  },
+  {
+    id: 2,
+    title: 'Ka3ba',
+    subtitle: 'Hajj & Omra ERP System',
+    description: 'Comprehensive ERP platform for travel agencies specializing in religious tourism with complete business automation.',
+    icon: Plane,
+    link: 'https://ka3ba.com',
+    tech: ['Next.js', 'React.js', 'Laravel', 'MySQL'],
+    features: ['Quote Management', 'Accounting System', 'Supplier Management', 'Program Planning'],
+    color: 'from-amber-500/20 to-orange-500/20',
+    accentColor: 'text-amber-400',
+  },
+  {
+    id: 3,
+    title: 'Almoulate Immobilier',
+    subtitle: 'Real Estate Management Platform',
+    description: 'All-in-one real estate management system with financial tracking, project management, and HR modules.',
+    icon: Building2,
+    link: null,
+    tech: ['Laravel', 'Livewire', 'Bootstrap', 'MySQL'],
+    features: ['Financial Transactions', 'Project Management', 'HR Module', 'Analytics & Reports'],
+    color: 'from-blue-500/20 to-cyan-500/20',
+    accentColor: 'text-blue-400',
+  },
+  {
+    id: 4,
+    title: 'AliGarage',
+    subtitle: 'Garage Management SaaS',
+    description: 'Private garage management system with inventory control, service tracking, and financial management.',
+    icon: Car,
+    link: null,
+    tech: ['Vue.js', 'Laravel', 'SQL Server', 'Bootstrap'],
+    features: ['Stock Management', 'Service History', 'POS System', 'Profit Tracking'],
+    color: 'from-purple-500/20 to-pink-500/20',
+    accentColor: 'text-purple-400',
+  },
+  {
+    id: 5,
+    title: 'SmileBusiness',
+    subtitle: 'B2B Distribution Platform',
+    description: 'Professional cleaning products distribution platform with quotation system and content management.',
+    icon: Globe,
+    link: 'https://smilebusiness.ma',
+    tech: ['Laravel', 'Bootstrap', 'MySQL', 'CMS'],
+    features: ['Client Quotations', 'Quote Management', 'CMS Dashboard', 'Product Catalog'],
+    color: 'from-teal-500/20 to-cyan-500/20',
+    accentColor: 'text-teal-400',
+  },
+  {
+    id: 6,
+    title: 'SchoolSystem',
+    subtitle: 'Educational Management System',
+    description: 'Complete school management solution with portals for admins, teachers, parents, and students.',
+    icon: GraduationCap,
+    link: null,
+    tech: ['Laravel', 'MySQL', 'Bootstrap', 'REST API'],
+    features: ['Multi-Portal Access', 'Attendance Tracking', 'LMS Integration', 'Fee Management'],
+    color: 'from-rose-500/20 to-red-500/20',
+    accentColor: 'text-rose-400',
+  },
+];
+
+export const ProjectsSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const [hoveredId, setHoveredId] = useState<number | null>(null);
+
+  return (
+    <section id="projects" className="py-24 relative" ref={ref}>
+      <div className="container mx-auto px-6">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <span className="text-primary font-mono text-sm mb-4 block">
+            {'<Projects />'}
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Featured <span className="text-gradient">Work</span>
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            A showcase of production-ready applications built with modern technologies 
+            and best practices.
+          </p>
+        </motion.div>
+
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              onMouseEnter={() => setHoveredId(project.id)}
+              onMouseLeave={() => setHoveredId(null)}
+              className="group relative"
+            >
+              <div className={`h-full p-6 rounded-2xl border border-border bg-card/50 hover:border-primary/50 transition-all duration-300 ${
+                hoveredId === project.id ? 'shadow-lg shadow-primary/10' : ''
+              }`}>
+                {/* Gradient Background */}
+                <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+                
+                <div className="relative z-10">
+                  {/* Header */}
+                  <div className="flex items-start justify-between mb-4">
+                    <div className={`p-3 rounded-xl bg-secondary/50 ${project.accentColor}`}>
+                      <project.icon size={24} />
+                    </div>
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-lg hover:bg-secondary/50 transition-colors text-muted-foreground hover:text-primary"
+                      >
+                        <ExternalLink size={18} />
+                      </a>
+                    )}
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
+                  <p className={`text-sm font-medium mb-3 ${project.accentColor}`}>
+                    {project.subtitle}
+                  </p>
+
+                  {/* Description */}
+                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  {/* Features */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.features.slice(0, 3).map((feature) => (
+                      <span
+                        key={feature}
+                        className="text-xs px-2 py-1 rounded-md bg-secondary/50 text-muted-foreground"
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((tech) => (
+                      <Badge
+                        key={tech}
+                        variant="outline"
+                        className="text-xs border-border hover:border-primary/50"
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* View More CTA */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="text-center mt-12"
+        >
+          <Button
+            variant="outline"
+            size="lg"
+            className="group"
+            asChild
+          >
+            <a href="https://github.com/TAYVR" target="_blank" rel="noopener noreferrer">
+              View More on GitHub
+              <ChevronRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </Button>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
