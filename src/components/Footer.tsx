@@ -29,7 +29,7 @@ export const Footer = () => {
               className="text-2xl font-bold text-gradient"
               whileHover={{ scale: 1.05 }}
             >
-              ET.
+             <img width={50} src="/logo.png" alt="TAYAR"  />
             </motion.span>
             <p className="text-sm text-muted-foreground flex items-center gap-1">
               © {currentYear} Elmahdi Tayar. {t('footer.builtWith')}{' '}
