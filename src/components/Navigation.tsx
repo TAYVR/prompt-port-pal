@@ -49,7 +49,7 @@ export const Navigation = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-           <img width={50} src="/logo.png" alt="TAYAR"  />
+           <img width={50} src="/prompt-port-pal/logo.png" alt="TAYAR"  />
           </motion.a>
 
           {/* Desktop Navigation */}
