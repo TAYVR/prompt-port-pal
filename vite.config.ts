@@ -15,5 +15,5 @@ export default defineConfig(({ command }) => ({
     host: true,
   },
   // Use root for dev, and repo subpath for production (unless using a custom domain)
-  base: command === "serve" ? "/" : "/prompt-port-pal/",
+  base: "/",
 }));
